@@ -6,8 +6,94 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Brush x:Key="DarkGray">#484848</Brush>
+        <Brush x:Key="Purple">#9027b0</Brush>
+    </Page.Resources>
+    <Grid>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="Menu" DisplayMode="Overlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150">
+            <SplitView.Pane>
+                <StackPanel Background="{StaticResource Purple}">
 
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,50,0,0">
+
+                        <Button x:Name="HomePageButton" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Content="&#xE80F;"
+                                Width="50" 
+                                Height="50" 
+                                Background="Transparent"
+                                Foreground="White"/>
+
+                        <TextBlock Text="Entrada" 
+                               FontSize="18" 
+                               VerticalAlignment="Center"
+                               Foreground="White"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+
+                        <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE7C5;"
+                       Width="50" Height="50" Background="Transparent"
+                            Foreground="White"/>
+
+                        <TextBlock Text="Fotos" 
+                               FontSize="18" 
+                               VerticalAlignment="Center"
+                               Foreground="White"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Button x:Name="MenuButton3" 
+                            FontFamily="Segoe MDL2 Assets" 
+                            Content="&#xE909;"
+                            Width="50" 
+                            Height="50" 
+                            Background="Transparent"
+                            Foreground="White"/>
+
+                        <TextBlock Text="Web Page" 
+                               FontSize="18" 
+                               VerticalAlignment="Center"
+                               Foreground="White"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+
+                        <Button x:Name="MenuButton4" 
+                            FontFamily="Segoe MDL2 Assets" 
+                            Content="&#xE77B;"
+                            Width="50" 
+                            Height="50" 
+                            Background="Transparent"
+                            Foreground="White"/>
+
+                        <TextBlock Text="Contato" 
+                               FontSize="18"                    
+                               VerticalAlignment="Center"
+                               Foreground="White"/>
+
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid Background="{StaticResource DarkGray}">
+                    <Frame x:Name="ContentFrame"></Frame>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+
+        <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                Width="50" Height="50" Background="Transparent"
+                    Foreground="White"
+                    VerticalAlignment="Top"
+                    Click="HamburgerButton_Click"/>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar Visibility="Collapsed" Background="{StaticResource Purple}"/>
+    </Page.BottomAppBar>
 </Page>
