@@ -25,7 +25,8 @@
                                 Width="50" 
                                 Height="50" 
                                 Background="Transparent"
-                                Foreground="White"/>
+                                Foreground="White"
+                                Click="HomePageButton_OnClick"/>
 
                         <TextBlock Text="Entrada" 
                                FontSize="18" 
@@ -35,9 +36,10 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
 
-                        <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE7C5;"
+                        <Button x:Name="GalleryPageButton" FontFamily="Segoe MDL2 Assets" Content="&#xE7C5;"
                        Width="50" Height="50" Background="Transparent"
-                            Foreground="White"/>
+                            Foreground="White"
+                                Click="GalleryPageButton_OnClick"/>
 
                         <TextBlock Text="Fotos" 
                                FontSize="18" 
@@ -48,13 +50,14 @@
 
                     <StackPanel Orientation="Horizontal">
 
-                        <Button x:Name="MenuButton3" 
+                        <Button x:Name="WebViewPageButton" 
                             FontFamily="Segoe MDL2 Assets" 
                             Content="&#xE909;"
                             Width="50" 
                             Height="50" 
                             Background="Transparent"
-                            Foreground="White"/>
+                            Foreground="White"
+                                Click="WebViewPageButton_OnClick"/>
 
                         <TextBlock Text="Web Page" 
                                FontSize="18" 
@@ -64,13 +67,14 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
 
-                        <Button x:Name="MenuButton4" 
+                        <Button x:Name="ContactPageButton" 
                             FontFamily="Segoe MDL2 Assets" 
                             Content="&#xE77B;"
                             Width="50" 
                             Height="50" 
                             Background="Transparent"
-                            Foreground="White"/>
+                            Foreground="White"
+                                Click="ContactPageButton_OnClick"/>
 
                         <TextBlock Text="Contato" 
                                FontSize="18"                    

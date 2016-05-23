@@ -1,19 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -38,11 +27,32 @@ namespace MeetechApp
             titleBar.ForegroundColor = Colors.White;
             titleBar.ButtonBackgroundColor = bgColor;
             titleBar.ButtonForegroundColor = Colors.White;
+            ContentFrame.Navigate(typeof(HomePage));
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             Menu.IsPaneOpen = !Menu.IsPaneOpen;
+        }
+
+        private void HomePageButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(HomePage));
+        }
+
+        private void GalleryPageButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(GalleryPage));
+        }
+
+        private void WebViewPageButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(WebViewPage));
+        }
+
+        private void ContactPageButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(ContactPage));
         }
     }
 }
