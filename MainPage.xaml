@@ -12,76 +12,104 @@
     </Page.Resources>
     <Grid>
 
-        <SplitView x:Name="Menu" DisplayMode="Overlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150">
+        <SplitView x:Name="Menu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150">
             <SplitView.Pane>
-                <StackPanel Background="{StaticResource Purple}">
-
-                    <StackPanel Orientation="Horizontal"
-                                Margin="0,50,0,0">
-
+                <StackPanel Background="{StaticResource Purple}"
+                            >
+                    <StackPanel.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Height" Value="50"></Setter>
+                            <Setter Property="Width" Value="150"></Setter>
+                        </Style>
+                    </StackPanel.Resources>
                         <Button x:Name="HomePageButton" 
-                                FontFamily="Segoe MDL2 Assets" 
-                                Content="&#xE80F;"
-                                Width="50" 
-                                Height="50" 
+                                Margin="15,50,0,0"
                                 Background="Transparent"
                                 Foreground="White"
-                                Click="HomePageButton_OnClick"/>
+                                Click="HomePageButton_OnClick">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <StackPanel Orientation="Horizontal"
+                                            VerticalAlignment="Center">
+                                    <TextBlock Text="&#xE80F;"
+                                               FontFamily="Segoe MDL2 Assets"
+                                               FontSize="18"
+                                               Margin="0,0,20,0"/>
+                                    <TextBlock Text="Entrada" 
+                                               FontSize="18"
+                                               VerticalAlignment="Center"
+                                               Foreground="White"/>
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Button.Template>
+                        </Button>
 
-                        <TextBlock Text="Entrada" 
-                               FontSize="18" 
-                               VerticalAlignment="Center"
-                               Foreground="White"/>
-
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-
-                        <Button x:Name="GalleryPageButton" FontFamily="Segoe MDL2 Assets" Content="&#xE7C5;"
-                       Width="50" Height="50" Background="Transparent"
-                            Foreground="White"
-                                Click="GalleryPageButton_OnClick"/>
-
-                        <TextBlock Text="Fotos" 
-                               FontSize="18" 
-                               VerticalAlignment="Center"
-                               Foreground="White"/>
-
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="GalleryPageButton" 
+                                Content="&#xE7C5;"
+                                Margin="15,0,0,0"
+                                Background="Transparent"
+                                Foreground="White"
+                                Click="GalleryPageButton_OnClick">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="&#xE7C5;"
+                                               VerticalAlignment="Center"
+                                               FontSize="18"
+                                               FontFamily="Segoe MDL2 Assets"
+                                               Margin="0,0,20,0"/>
+                                    <TextBlock Text="Fotos" 
+                                               FontSize="18"
+                                               VerticalAlignment="Center"
+                                               Foreground="White"/>
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Button.Template>
+                        </Button>
 
                         <Button x:Name="WebViewPageButton" 
-                            FontFamily="Segoe MDL2 Assets" 
-                            Content="&#xE909;"
-                            Width="50" 
-                            Height="50" 
+                                Background="Transparent"
+                                Margin="15,0,0,0"
+                                Foreground="White"
+                                Click="WebViewPageButton_OnClick">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="&#xE909;"
+                                                   FontFamily="Segoe MDL2 Assets"
+                                                   VerticalAlignment="Center"
+                                                   FontSize="18"
+                                                   Margin="0,0,20,0"/>
+                                        <TextBlock Text="Site" 
+                                                   FontSize="18"
+                                                   VerticalAlignment="Center"
+                                                   Foreground="White"/>
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                    <Button x:Name="ContactPageButton" 
                             Background="Transparent"
+                                Margin="15,0,0,0"
                             Foreground="White"
-                                Click="WebViewPageButton_OnClick"/>
-
-                        <TextBlock Text="Web Page" 
-                               FontSize="18" 
-                               VerticalAlignment="Center"
-                               Foreground="White"/>
-
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-
-                        <Button x:Name="ContactPageButton" 
-                            FontFamily="Segoe MDL2 Assets" 
-                            Content="&#xE77B;"
-                            Width="50" 
-                            Height="50" 
-                            Background="Transparent"
-                            Foreground="White"
-                                Click="ContactPageButton_OnClick"/>
-
-                        <TextBlock Text="Contato" 
-                               FontSize="18"                    
-                               VerticalAlignment="Center"
-                               Foreground="White"/>
-
-                    </StackPanel>
+                            Click="ContactPageButton_OnClick">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="&#xE77B;"
+                                               FontFamily="Segoe MDL2 Assets"
+                                               VerticalAlignment="Center"
+                                               FontSize="18"
+                                               Margin="0,0,20,0"/>
+                                    <TextBlock Text="Contato" 
+                                               FontSize="18"
+                                               VerticalAlignment="Center"
+                                               Foreground="White"/>
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </StackPanel>
             </SplitView.Pane>
             <SplitView.Content>
@@ -91,11 +119,14 @@
             </SplitView.Content>
         </SplitView>
 
-        <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                Width="50" Height="50" Background="Transparent"
-                    Foreground="White"
-                    VerticalAlignment="Top"
-                    Click="HamburgerButton_Click"/>
+        <Button x:Name="HamburgerButton" 
+                FontFamily="Segoe MDL2 Assets" 
+                Content="&#xE700;"
+                Width="50" Height="50" 
+                Background="Transparent"
+                Foreground="White"
+                VerticalAlignment="Top"
+                Click="HamburgerButton_Click"/>
     </Grid>
     <Page.BottomAppBar>
         <AppBar Visibility="Collapsed" Background="{StaticResource Purple}"/>
