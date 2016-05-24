@@ -120,6 +120,8 @@
     <None Include="MeetechApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\contact1.jpeg" />
+    <Content Include="Assets\contact2.png" />
     <Content Include="Assets\image1.jpg" />
     <Content Include="Assets\image2.jpg" />
     <Content Include="Assets\image3.jpg" />
@@ -142,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Assets\Assets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ContactPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

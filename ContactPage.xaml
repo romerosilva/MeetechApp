@@ -6,8 +6,65 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+    <StackPanel VerticalAlignment="Center">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Contact2.(RelativePanel.RightOf)"
+                                Value="Contact1"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Contact1.(RelativePanel.Below)"
+                                Value="Contact2"></Setter>
+                        <Setter Target="Contact1.(RelativePanel.AlignHorizontalCenterWith)"
+                                Value="Contact2"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <TextBlock Text="Organizadores"
+                   Foreground="White"
+                   FontSize="50"
+                   TextAlignment="Center"
+                   Margin="0,0,0,40"/>
+        <RelativePanel HorizontalAlignment="Center">
+            <StackPanel x:Name="Contact1"
+                        Margin="40">
+                    <Ellipse Width="150"
+                             Height="150"
+                             Margin="0,0,0,20">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Assets/contact1.jpeg"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Text="Pryscila Bonomi"
+                               Foreground="White"
+                               FontSize="20"
+                               TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel x:Name="Contact2"
+                            Margin="40">
+                    <Ellipse Width="150"
+                             Height="150"
+                             Margin="0,0,0,20">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Assets/contact2.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Text="Luis Fernandez"
+                               Foreground="White"
+                               FontSize="20"
+                               TextAlignment="Center"/>
+                </StackPanel>
+        </RelativePanel>
+    </StackPanel>
 </Page>
