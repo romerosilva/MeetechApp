@@ -60,7 +60,7 @@
                             <ImageBrush ImageSource="Assets/contact2.png"/>
                         </Ellipse.Fill>
                     </Ellipse>
-                    <TextBlock Text="Luis Fernandez"
+                    <TextBlock Text="Jade Costa"
                                Foreground="White"
                                FontSize="20"
                                TextAlignment="Center"/>
