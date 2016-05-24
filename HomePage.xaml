@@ -8,9 +8,11 @@
     mc:Ignorable="d">
 
     <StackPanel Background="Transparent"
-                VerticalAlignment="Center">
-        <Viewbox Height="80"
-                 Margin="0,0,0,40">
+                VerticalAlignment="Center"
+                Margin="10,0,10,0">
+        <Viewbox Height="70"
+                 Margin="0,0,0,40"
+                 HorizontalAlignment="Center">
                 <Path Data="{StaticResource LogoPath}"
                   Fill="White"/>
         </Viewbox>
@@ -21,11 +23,12 @@
             Bem Vindo!
         </TextBlock>
         <TextBlock Foreground="White"
-                   FontSize="30"
+                   FontSize="25"
                    TextAlignment="Center"
-                   TextWrapping="WrapWholeWords">Clique no botão no canto superior direito para ter acesso às opções </TextBlock>
+                   Margin="0,0,0,20"
+                   TextWrapping="WrapWholeWords">Utilize os botões da barra de tarefas para acessar as outras páginas do app </TextBlock>
         <TextBlock Foreground="White"
-                   FontSize="30"
+                   FontSize="28"
                    TextAlignment="Center"
                    TextWrapping="WrapWholeWords">Espero que tenha uma ótima experência no Meetech</TextBlock>
     </StackPanel>

@@ -10,7 +10,7 @@
         <Brush x:Key="DarkGray">#484848</Brush>
         <Brush x:Key="Purple">#9027b0</Brush>
     </Page.Resources>
-    <ScrollViewer>
+    <ScrollViewer CanDrag="True">
         <Grid Background="{StaticResource DarkGray}">
             <Frame x:Name="ContentFrame"/>
         </Grid>
