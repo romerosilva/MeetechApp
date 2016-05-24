@@ -7,11 +7,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Transparent">
-        <TextBlock Text="Gallery Page"
-                   Foreground="White"
-                   FontSize="40"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
-    </Grid>
+    <ScrollViewer>
+        <GridView>
+            <GridView.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="Width" Value="400"/>
+                </Style>
+            </GridView.Resources>
+            <GridViewItem Margin="20">
+                <Image Source="Assets/image1.jpg"/>
+            </GridViewItem>
+            <GridViewItem>
+                <Image Source="Assets/image2.jpg"/>
+            </GridViewItem>
+            <GridViewItem>
+                <Image Source="Assets/image3.jpg"/>
+            </GridViewItem>
+            <GridViewItem>
+                <Image Source="Assets/image4.jpg"/>
+            </GridViewItem>
+            <GridViewItem>
+                <Image Source="Assets/image5.jpg"/>
+            </GridViewItem>
+            <GridViewItem>
+                <Image Source="Assets/image6.jpg"/>
+            </GridViewItem>
+            <GridViewItem>
+                <Image Source="Assets/image7.jpg"/>
+            </GridViewItem>
+            <GridViewItem>
+                <Image Source="Assets/image8.jpg"/>
+            </GridViewItem>
+        </GridView>
+    </ScrollViewer>
 </Page>
