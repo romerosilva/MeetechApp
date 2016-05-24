@@ -7,11 +7,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Transparent">
-        <TextBlock Text="Página Inicial"
-                   Foreground="White"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontSize="40"></TextBlock>
-    </Grid>
+    <StackPanel Background="Transparent"
+                VerticalAlignment="Center">
+        <Viewbox Height="80"
+                 Margin="0,0,0,40">
+                <Path Data="{StaticResource LogoPath}"
+                  Fill="White"/>
+        </Viewbox>
+        <TextBlock Foreground="White"
+                   FontSize="40"
+                   TextAlignment="Center"
+                   Margin="0,0,0,20">
+            Bem Vindo!
+        </TextBlock>
+        <TextBlock Foreground="White"
+                   FontSize="30"
+                   TextAlignment="Center"
+                   TextWrapping="WrapWholeWords">Clique no botão no canto superior direito para ter acesso às opções </TextBlock>
+        <TextBlock Foreground="White"
+                   FontSize="30"
+                   TextAlignment="Center"
+                   TextWrapping="WrapWholeWords">Espero que tenha uma ótima experência no Meetech</TextBlock>
+    </StackPanel>
 </Page>
